@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import Jeremy from '../../icons/jeremy.jpeg'
+import Jeremy from '../../icons/Jeremy.jpeg'
 import Shannon from '../../icons/Shannon.jpeg'
 
 export default function About() {
