@@ -11,8 +11,8 @@ export default function About() {
           <div className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
               <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Meet Our Team</h2>
           </div> 
-          <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2 text-center">
-            <div className="max-w-sm overflow-hidden shadow-lg">
+          <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+            <div className="max-w-sm overflow-hidden shadow-lg text-center">
                 <Image
                     className="w-full h-auto rounded-t"
                     src={Jeremy}
