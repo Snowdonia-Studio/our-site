@@ -29,7 +29,7 @@ export const Header: FC<Props> = ({ locale }) => {
           <Link lang={locale} href={`/about`}>
             Meet The Team
           </Link>
-          <a href=''>Contact Us</a>
+          <Link href={'/contact'}>Contact Us</Link>
           <a href=''>Our Work</a>
         </nav>
       </div>

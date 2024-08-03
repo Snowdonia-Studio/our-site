@@ -7,7 +7,6 @@ export default function DashboardPage() {
     <div>
       <section className='flex flex-col items-center justify-center py-24'>
         <h1 className='text-center text-7xl font-extrabold leading-tight'>
-          
           <span className='bg-span-bg bg-clip-text text-transparent'>
             Lorem Ipsum
           </span>
