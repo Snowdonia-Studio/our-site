@@ -11,37 +11,33 @@ export default function About() {
           <div className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
               <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Meet Our Team</h2>
           </div> 
-          <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
-              <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
-                  <a href="#">
-                    <Image
-                      className="w-full h-64 rounded-lg sm:rounded-none sm:rounded-l-lg"
-                      src={Jeremy}
-                      alt="Site Logo"
-                    />
-                  </a>
-                  <div className="p-5">
-                      <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                          <a href="#">Jeremy</a>
-                      </h3>
-                      <span className="text-gray-500 dark:text-gray-400">Co-founder and Developer</span>
-                  </div>
-              </div>
-              <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
-                  <a href="#">
-                  <Image
-                      className="w-full h-64 rounded-lg sm:rounded-none sm:rounded-l-lg"
-                      src={Shannon}
-                      alt="Site Logo"
-                    />
-                  </a>
-                  <div className="p-5">
-                      <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                          <a href="#">Shannon</a>
-                      </h3>
-                      <span className="text-gray-500 dark:text-gray-400">Co-founder & Full Stack Developer</span>
-                  </div>
-              </div>
+          <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2 text-center">
+            <div className="max-w-sm overflow-hidden shadow-lg">
+                <Image
+                    className="w-full h-auto rounded-t"
+                    src={Jeremy}
+                    alt="Photo of Jeremy"
+                />
+                <div className="px-6 py-4 dark:bg-gray-800 rounded-b">
+                    <div className="font-bold text-xl mb-2 dark:text-white">Jeremy Grice</div>
+                    <p className="text-gray-700 text-base dark:text-gray-400">
+                    Co-Founder & Developer
+                    </p>
+                </div>
+            </div>
+            <div className="max-w-sm overflow-hidden shadow-lg text-center">
+                <Image
+                    className="w-full h-auto rounded-t"
+                    src={Shannon}
+                    alt="Photo of Shannon"
+                />
+                <div className="px-6 py-4 dark:bg-gray-800 rounded-b">
+                    <div className="font-bold text-xl mb-2 dark:text-white">Shannon Grice</div>
+                    <p className="text-gray-700 text-base dark:text-gray-400">
+                    Co-Founder & Developer
+                    </p>
+                </div>
+            </div>
           </div>  
       </div>
     </section>
