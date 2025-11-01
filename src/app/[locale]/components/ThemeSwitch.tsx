@@ -18,14 +18,14 @@ export default function ThemeSwitch() {
   if (!mounted)
     return (
       <Button
-        size='small'
-        type='button'
-        className='text-destructive inline-flex w-fit min-w-[95px] items-center justify-between gap-3'
-        id='options-menu'
+        size="small"
+        type="button"
+        className="text-destructive inline-flex w-fit min-w-[95px] items-center justify-between gap-3"
+        id="options-menu"
         aria-expanded={isOpen}
         onClick={() => {}}
       >
-        <span className='ml-2'>{t('Theme')}</span>
+        <span className="ml-2">{t('Theme')}</span>
         <FiSun />
       </Button>
     )
@@ -35,27 +35,27 @@ export default function ThemeSwitch() {
   }
 
   return (
-    <div ref={ref} className='relative inline-block text-left'>
+    <div ref={ref} className="relative inline-block text-left">
       <Button
-        size='small'
-        type='button'
-        className='text-destructive inline-flex w-full min-w-[95px] items-center justify-between gap-3'
-        id='options-menu'
+        size="small"
+        type="button"
+        className="text-destructive inline-flex w-full min-w-[95px] items-center justify-between gap-3"
+        id="options-menu"
         aria-expanded={isOpen}
         onClick={toggleDropdown}
       >
-        <span className='ml-2'>{t('Theme')}</span>
+        <span className="ml-2">{t('Theme')}</span>
         <FiSun />
       </Button>
       {isOpen && (
-        <div className='absolute right-0 mt-2 w-full origin-top-right rounded-md bg-dropdown shadow-lg'>
+        <div className="absolute right-0 mt-2 w-full origin-top-right rounded-md bg-dropdown shadow-lg">
           <div
-            className='py-1'
-            role='menu'
-            aria-orientation='vertical'
-            aria-labelledby='options-menu'
+            className="py-1"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="options-menu"
           >
-            {themes.map(themeItem => {
+            {themes.map((themeItem) => {
               return (
                 <button
                   key={themeItem}

@@ -20,12 +20,12 @@
     --span-bg: linear-gradient(to right, #4e4e9e, #097fa5, #3e87ed);
   }
   .dark {
-    --primary: #d6deff;
-    --secondary: #0ba6d1;
-    --background: #121212;
+    --primary: #fafaf9;
+    --secondary: #fafaf9;
+    --background: #1c1917;
     --background-secondary: #1b1b1b;
     --button: #097fa5;
-    --button-text: #fff;
+    --button-text: #fafaf9;
     --text-secondary: #bbbbbb;
     --dropdown: #2d2d2d;
     --dropdown-hover: #454545;
@@ -169,5 +169,62 @@
   }
   body {
     @apply bg-background text-primary;
+    cursor: none;
+  }
+  * {
+    cursor: none !important;
+  }
+  button,
+  input,
+  textarea,
+  select,
+  a {
+    cursor: none !important;
+  }
+  .custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition:
+      transform 0.15s ease,
+      width 0.15s ease,
+      height 0.15s ease,
+      background-color 0.15s ease,
+      border-color 0.15s ease;
+    z-index: 9999;
+    mix-blend-mode: difference;
+  }
+  .dark .custom-cursor {
+    border-color: var(--primary);
+    mix-blend-mode: normal;
+  }
+  .custom-cursor.hover {
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary);
+    border-color: var(--primary);
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .cursor-text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 10000;
+    mix-blend-mode: difference;
+  }
+  .dark .cursor-text {
+    mix-blend-mode: normal;
+    color: var(--background);
   }
 }

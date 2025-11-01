@@ -23,15 +23,15 @@ const LangSwitcher: React.FC = () => {
     { country: 'Русский', code: 'ru' },
     { country: '日本語', code: 'ja' },
     { country: 'العربية', code: 'ar' },
-    { country: 'فارسی', code: 'fa' }
+    { country: 'فارسی', code: 'fa' },
   ]
 
   return (
-    <div className='flex items-center justify-center'>
-      <div className='relative'>
+    <div className="flex items-center justify-center">
+      <div className="relative">
         <Button
-          className='text-destructive inline-flex w-full items-center justify-between gap-3'
-          size='small'
+          className="text-destructive inline-flex w-full items-center justify-between gap-3"
+          size="small"
           onClick={() => setIsOptionsExpanded(!isOptionsExpanded)}
           onBlur={() => setIsOptionsExpanded(false)}
         >
@@ -39,22 +39,19 @@ const LangSwitcher: React.FC = () => {
           <FiGlobe />
         </Button>
         {isOptionsExpanded && (
-          <div className='absolute right-0 mt-2 w-full origin-top-right rounded-md bg-dropdown shadow-lg'>
+          <div className="absolute right-0 mt-2 w-full origin-top-right rounded-md bg-dropdown shadow-lg">
             <div
-              className='py-1'
-              role='menu'
-              aria-orientation='vertical'
-              aria-labelledby='options-menu'
+              className="py-1"
+              role="menu"
+              aria-orientation="vertical"
+              aria-labelledby="options-menu"
             >
-              {options.map(lang => {
+              {options.map((lang) => {
                 return (
-                  <Link
-                    key={lang.code}
-                    href={`/${lang.code}/${urlSegments.join('/')}`}
-                  >
+                  <Link key={lang.code} href={`/${lang.code}/${urlSegments.join('/')}`}>
                     <button
                       lang={lang.code}
-                      onMouseDown={e => {
+                      onMouseDown={(e) => {
                         e.preventDefault()
                       }}
                       className={`block w-full px-4 py-2 text-left text-sm hover:bg-dropdownHover ${

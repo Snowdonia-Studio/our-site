@@ -3,7 +3,7 @@ import { NextRequest } from 'next/server'
 import { locales } from './i18n'
 import { localePrefix } from './navigation'
 type CustomMiddleware = (req: NextRequest) => Promise<NextRequest>
-const customMiddleware: CustomMiddleware = async req => {
+const customMiddleware: CustomMiddleware = async (req) => {
   console.log('Custom middleware executed before next-intl')
   return req
 }
@@ -11,7 +11,7 @@ const customMiddleware: CustomMiddleware = async req => {
 const intlMiddleware = createMiddleware({
   locales,
   defaultLocale: 'en',
-  localePrefix
+  localePrefix,
 })
 
 export default async function middleware(
@@ -22,5 +22,5 @@ export default async function middleware(
 }
 
 export const config = {
-  matcher: ['/', '/(fr|en|ja|de|ru|es|fa|ar)/:path*']
+  matcher: ['/', '/(fr|en|ja|de|ru|es|fa|ar)/:path*'],
 }

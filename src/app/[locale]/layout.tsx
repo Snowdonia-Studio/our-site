@@ -1,35 +1,32 @@
 import { ThemeProvider } from '@/src/app/[locale]/components/ThemeProvider'
 import type { Metadata } from 'next'
-import {
-  AbstractIntlMessages,
-  NextIntlClientProvider,
-  useMessages
-} from 'next-intl'
+import { AbstractIntlMessages, NextIntlClientProvider, useMessages } from 'next-intl'
 import { Inter, Rubik, Space_Grotesk } from 'next/font/google'
 import NextTopLoader from 'nextjs-toploader'
 import { Header } from './components/Header'
+import CustomCursor from './components/CustomCursor'
 import './globals.css'
 
 const inter = Inter({
   subsets: ['latin'],
-  variable: '--inter'
+  variable: '--inter',
 })
 const rubik = Rubik({
   subsets: ['arabic'],
-  variable: '--rubik'
+  variable: '--rubik',
 })
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
-  variable: '--font-space-grotesk'
+  variable: '--font-space-grotesk',
 })
 export const metadata: Metadata = {
   title: 'Snowdonia Studio',
-  description: ''
+  description: '',
 }
 
 export default function RootLayout({
   children,
-  params: { locale }
+  params: { locale },
 }: {
   children: React.ReactNode
   params: { locale: string }
@@ -43,31 +40,22 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body>
-        <ThemeProvider
-          enableSystem
-          attribute='class'
-          defaultTheme='dark'
-          themes={[
-            'dark'
-          ]}
-        >
-          <NextIntlClientProvider
-            locale={locale}
-            messages={messages as AbstractIntlMessages}
-          >
+        <ThemeProvider enableSystem attribute="class" defaultTheme="dark" themes={['dark']}>
+          <NextIntlClientProvider locale={locale} messages={messages as AbstractIntlMessages}>
             <NextTopLoader
               initialPosition={0.08}
               crawlSpeed={200}
               height={3}
               crawl={true}
-              easing='ease'
+              easing="ease"
               speed={200}
-              shadow='0 0 10px #2299DD,0 0 5px #2299DD'
-              color='var(--primary)'
+              shadow="0 0 10px #2299DD,0 0 5px #2299DD"
+              color="var(--primary)"
               showSpinner={false}
             />
+            <CustomCursor />
             <Header locale={locale} />
-            <main className='mx-auto max-w-screen-2xl'>{children}</main>
+            <main className="mx-auto mt-20 max-w-screen-2xl">{children}</main>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

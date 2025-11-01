@@ -1,5 +1,5 @@
 import type { NextRequest } from 'next/server'
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
 
 export async function POST(request: NextRequest) {
   try {
@@ -28,27 +28,19 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const host = process.env.SMTP_HOST
-    const port = process.env.SMTP_PORT ? parseInt(process.env.SMTP_PORT, 10) : undefined
-    const user = process.env.SMTP_USER
-    const pass = process.env.SMTP_PASS
+    const apiKey = process.env.RESEND_API_KEY
+    const from = process.env.CONTACT_FROM
     const to = process.env.CONTACT_TO
-    const from = process.env.CONTACT_FROM || user
 
-    if (!host || !port || !user || !pass || !to || !from) {
-      console.error('Email not configured. Missing one of SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, CONTACT_TO, CONTACT_FROM')
-      return new Response(
-        JSON.stringify({ ok: false, error: 'Email not configured on server' }),
-        { status: 500, headers: { 'content-type': 'application/json' } }
-      )
+    if (!apiKey || !to || !from) {
+      console.error('Email not configured. Missing RESEND_API_KEY, CONTACT_TO, or CONTACT_FROM')
+      return new Response(JSON.stringify({ ok: false, error: 'Email not configured on server' }), {
+        status: 500,
+        headers: { 'content-type': 'application/json' },
+      })
     }
 
-    const transporter = nodemailer.createTransport({
-      host,
-      port,
-      secure: port === 465,
-      auth: { user, pass }
-    })
+    const resend = new Resend(apiKey)
 
     const html = `
       <div>
@@ -60,26 +52,24 @@ export async function POST(request: NextRequest) {
       </div>
     `
 
-    await transporter.sendMail({
+    await resend.emails.send({
       from,
       to,
       replyTo: email,
       subject: `[Contact] ${subject}`,
       text: `Name: ${name || '(not provided)'}\nEmail: ${email}\nSubject: ${subject}\n\n${message}`,
-      html
+      html,
     })
 
     return new Response(JSON.stringify({ ok: true }), {
       status: 200,
-      headers: { 'content-type': 'application/json' }
+      headers: { 'content-type': 'application/json' },
     })
   } catch (error) {
     console.error('Contact form error:', error)
     return new Response(JSON.stringify({ ok: false, error: 'Unexpected server error' }), {
       status: 500,
-      headers: { 'content-type': 'application/json' }
+      headers: { 'content-type': 'application/json' },
     })
   }
 }
-
-
