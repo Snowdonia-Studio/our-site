@@ -37,7 +37,7 @@ export default function About() {
               />
             </div>
             <div className="mx-auto mt-4 max-w-xl">
-              <p className="text-gray-700 dark:text-gray-300">
+              <p className="text-base text-gray-700 dark:text-gray-300">
                 Jeremy is an eCommerce engineering leader with deep agency experience delivering
                 Shopify and Salesforce Commerce Cloud (SFCC) solutions. He partners closely with
                 clients from discovery through launch, leading cross-functional teams to ship
@@ -136,7 +136,7 @@ export default function About() {
               />
             </div>
             <div className="mx-auto mt-4 max-w-xl">
-              <p className="text-gray-700 dark:text-gray-300">
+              <p className="text-base text-gray-700 dark:text-gray-300">
                 Shannon has over 10 years of experience in agency environments, leading Salesforce
                 Commerce Cloud (SFCC) and Shopify engagements. She has served as an SFCC Front-End
                 Lead and Developer at Red Van Workshop and previously contributed as an SFCC

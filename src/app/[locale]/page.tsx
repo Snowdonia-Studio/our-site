@@ -6,7 +6,7 @@ import ContactUsPage from './contact/page'
 import WorkPage from './work/page'
 import AboutPage from './about/page'
 import BlogPage from './blog/page'
-import MountainBg from '../images/MountainBg.jpg'
+import MountainBg from '../images/mountainBg.jpg'
 
 export default function DashboardPage() {
   const t = useTranslations('')

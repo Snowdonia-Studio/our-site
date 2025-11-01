@@ -25,6 +25,9 @@ export const Footer = () => {
           </a>
         </li>
       </ul>
+      <p className="text-center text-sm text-gray-500 dark:text-gray-400">
+        &copy; {new Date().getFullYear()} Snowdonia Studio. All rights reserved.
+      </p>
     </footer>
   )
 }

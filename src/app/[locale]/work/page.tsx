@@ -39,9 +39,9 @@ export default function Work() {
                   <h2 className="text-3xl font-bold">The Olde Dutch</h2>
                 </a>
                 <ul className="flex flex-wrap items-center gap-2">
-                  <li className="project-pill whitespace-nowrap">Squarespace</li>
-                  <li className="project-pill whitespace-nowrap">Brand Identity</li>
-                  <li className="project-pill whitespace-nowrap">Site Creation</li>
+                  <li className="pill whitespace-nowrap">Squarespace</li>
+                  <li className="pill whitespace-nowrap">Brand Identity</li>
+                  <li className="pill whitespace-nowrap">Site Creation</li>
                 </ul>
               </div>
               <p className="mt-4 text-base">
@@ -68,15 +68,14 @@ export default function Work() {
                   <h2 className="text-3xl font-bold">Hungry Buffalo</h2>
                 </a>
                 <ul className="flex flex-wrap items-center gap-2">
-                  <li className="project-pill whitespace-nowrap">Squarespace</li>
-                  <li className="project-pill whitespace-nowrap">Brand Identity</li>
-                  <li className="project-pill whitespace-nowrap">Site Creation</li>
+                  <li className="pill whitespace-nowrap">Squarespace</li>
+                  <li className="pill whitespace-nowrap">Brand Identity</li>
+                  <li className="pill whitespace-nowrap">Site Creation</li>
                 </ul>
               </div>
               <p className="mt-4 text-base">
-                Given the client's familiarity with Squarespace already we built a new website for
-                them on the same platform and gave them the guidance to empower them to make updates
-                themselves.
+                A new Squarespace website for a local restaurant was built with a focus on a modern,
+                clean look and feel.
               </p>
             </div>
           </motion.div>
@@ -98,8 +97,8 @@ export default function Work() {
                   <h2 className="text-3xl font-bold">Millstone BBQ</h2>
                 </a>
                 <ul className="flex flex-wrap items-center gap-2">
-                  <li className="project-pill whitespace-nowrap">Squarespace</li>
-                  <li className="project-pill whitespace-nowrap">Refresh</li>
+                  <li className="pill whitespace-nowrap">Squarespace</li>
+                  <li className="pill whitespace-nowrap">Refresh</li>
                 </ul>
               </div>
               <p className="mt-4 text-base">
