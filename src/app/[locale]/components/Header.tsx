@@ -20,7 +20,7 @@ export const Header: FC<Props> = ({ locale }) => {
       </Link>
       <div className="flex flex-row items-center gap-3">
         <nav className="inline-flex gap-8">
-          <Link href={'/#services'}>Services</Link>
+          <a href="#services">Services</a>
           <Link href={'/work'}>Work</Link>
           <Link lang={locale} href={`/about`}>
             About
