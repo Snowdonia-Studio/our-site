@@ -4,9 +4,9 @@
 
 @layer base {
   :root {
-    --primary: #333366;
+    --primary: #1c1917;
     --secondary: #097fa5;
-    --background: #ededed;
+    --background: #fafaf9;
     --background-secondary: #c8dde3;
     --button: #097fa5;
     --button-text: #fff;
@@ -23,10 +23,10 @@
     --primary: #fafaf9;
     --secondary: #fafaf9;
     --background: #1c1917;
-    --background-secondary: #1b1b1b;
+    --background-secondary: #fafaf9;
     --button: #097fa5;
     --button-text: #fafaf9;
-    --text-secondary: #bbbbbb;
+    --text-secondary: #1c1917;
     --dropdown: #2d2d2d;
     --dropdown-hover: #454545;
     --button-secondary: #1d1d1d;
@@ -34,6 +34,22 @@
     --logo-shadow: #0a2e36;
     --logo-body: #097fa5;
     --span-bg: linear-gradient(to right, #8c00ff, #0fb4e1, #a1d930, #ae0000);
+  }
+  .light {
+    --primary: #1c1917;
+    --secondary: #097fa5;
+    --background: #fafaf9;
+    --background-secondary: #c8dde3;
+    --button: #097fa5;
+    --button-text: #fff;
+    --text-secondary: #3c3c3c;
+    --dropdown: #e0f4ff;
+    --dropdown-hover: #b3e5ff;
+    --button-secondary: #e7e7e7;
+    --selected: #9ec6ff;
+    --logo-shadow: #053949;
+    --logo-body: #00d8fe;
+    --span-bg: linear-gradient(to right, #4e4e9e, #097fa5, #3e87ed);
   }
   .sunset {
     --primary: #ff6b6b;
@@ -186,7 +202,7 @@
     width: 20px;
     height: 20px;
     background-color: transparent;
-    border: 2px solid var(--primary);
+    border: 2px solid #fff;
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
@@ -194,20 +210,15 @@
       transform 0.15s ease,
       width 0.15s ease,
       height 0.15s ease,
-      background-color 0.15s ease,
-      border-color 0.15s ease;
+      background-color 0.15s ease;
     z-index: 9999;
     mix-blend-mode: difference;
-  }
-  .dark .custom-cursor {
-    border-color: var(--primary);
-    mix-blend-mode: normal;
   }
   .custom-cursor.hover {
     width: 80px;
     height: 80px;
-    background-color: var(--primary);
-    border-color: var(--primary);
+    background-color: #fff;
+    border-color: #fff;
     transform: translate(-50%, -50%) scale(1);
   }
   .cursor-text {
@@ -215,7 +226,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fff;
+    color: #000;
     font-size: 14px;
     font-weight: 500;
     white-space: nowrap;
@@ -223,8 +234,15 @@
     z-index: 10000;
     mix-blend-mode: difference;
   }
-  .dark .cursor-text {
-    mix-blend-mode: normal;
-    color: var(--background);
+
+  .pill {
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    border: 1px solid var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-secondary);
+    color: var(--text-secondary);
   }
 }

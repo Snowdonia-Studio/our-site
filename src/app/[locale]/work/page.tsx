@@ -1,46 +1,113 @@
+'use client'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import OldeDutch from '../../icons/oldDutch.jpeg'
-import hungryBuffalo from '../../icons/hungryBuffalo.jpg'
+import { motion } from 'framer-motion'
+import OldeDutch from '../../images/oldDutch.jpeg'
+import hungryBuffalo from '../../images/hungryBuffalo.jpg'
+import millstone from '../../images/millstone.png'
 
 export default function Work() {
   const t = useTranslations('')
   return (
-    <section className="mt-20" id="work">
+    <section id="work">
       <div className="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16 ">
-        <div className="mx-auto mb-8 max-w-screen-sm text-center lg:mb-16">
-          <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-            Our Work
-          </h2>
-        </div>
-        <div className="mb-6 grid gap-8 md:grid-cols-2 lg:mb-16">
-          <div className="relative mx-auto mt-20 max-w-xl">
+        <motion.h2
+          className="mb-16 text-center text-7xl font-extrabold"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+        >
+          Our Work
+        </motion.h2>
+        <div className="grid gap-8">
+          <motion.div
+            className="relative mx-auto mt-20 grid grid-cols-2 gap-8"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.8, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
+          >
             <Image
-              className="h-64 w-full rounded-md object-cover"
+              className="h-64 w-full rounded-md border border-gray-200 object-cover"
               src={OldeDutch}
-              alt="Random image"
+              alt="Olde Dutch restaurant image"
             />
-            <div className="inset-0 flex items-center justify-center">
-              <h2 className="text-3xl font-bold text-white">The Olde Dutch</h2>
-              <p className="text-base text-text-secondary dark:text-stone-100">
-                A modern, responsive website for The Olde Dutch, a classic American restaurant.
+            <div className="inset-0 flex flex-col gap-4">
+              <div className="inset-0 flex flex-wrap justify-between gap-4">
+                <a href="https://www.theoldedutchrestaurant.com/">
+                  <h2 className="text-3xl font-bold">The Olde Dutch</h2>
+                </a>
+                <ul className="flex flex-wrap items-center gap-2">
+                  <li className="project-pill whitespace-nowrap">Squarespace</li>
+                  <li className="project-pill whitespace-nowrap">Brand Identity</li>
+                  <li className="project-pill whitespace-nowrap">Site Creation</li>
+                </ul>
+              </div>
+              <p className="mt-4 text-base">
+                As a recently aquired brand, we were tasked with creating a modern, responsive
+                website that would reflect the brand's heritage and appeal to a modern audience.
               </p>
             </div>
-          </div>
-          <div className="relative mx-auto mt-20 max-w-xl">
+          </motion.div>
+          <motion.div
+            className="relative mx-auto mt-20 grid grid-cols-2 gap-8"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+          >
             <Image
-              className="h-64 w-full rounded-md object-cover"
+              className="h-64 w-full rounded-md border border-gray-200 object-cover"
               src={hungryBuffalo}
               alt="Random image"
             />
-
-            <div className="inset-0 flex items-center justify-center">
-              <h2 className="text-3xl font-bold text-white">Hungry Buffalo</h2>
-              <p className="text-base text-text-secondary dark:text-stone-100">
-                A modern, responsive website for Hungry Buffalo, a classic American restaurant.
+            <div className="inset-0 flex flex-col gap-4">
+              <div className="inset-0 flex flex-wrap justify-between gap-4">
+                <a href="https://www.hungrybuffalo.com/">
+                  <h2 className="text-3xl font-bold">Hungry Buffalo</h2>
+                </a>
+                <ul className="flex flex-wrap items-center gap-2">
+                  <li className="project-pill whitespace-nowrap">Squarespace</li>
+                  <li className="project-pill whitespace-nowrap">Brand Identity</li>
+                  <li className="project-pill whitespace-nowrap">Site Creation</li>
+                </ul>
+              </div>
+              <p className="mt-4 text-base">
+                Given the client's familiarity with Squarespace already we built a new website for
+                them on the same platform and gave them the guidance to empower them to make updates
+                themselves.
               </p>
             </div>
-          </div>
+          </motion.div>
+          <motion.div
+            className="relative mx-auto mt-20 grid grid-cols-2 gap-8"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+          >
+            <Image
+              className="h-64 w-full rounded-md border border-gray-200 object-cover"
+              src={millstone}
+              alt="Random image"
+            />
+            <div className="inset-0 flex flex-col gap-4">
+              <div className="flex flex-col gap-4">
+                <a href="https://www.themillstonebbq.com/">
+                  <h2 className="text-3xl font-bold">Millstone BBQ</h2>
+                </a>
+                <ul className="flex flex-wrap items-center gap-2">
+                  <li className="project-pill whitespace-nowrap">Squarespace</li>
+                  <li className="project-pill whitespace-nowrap">Refresh</li>
+                </ul>
+              </div>
+              <p className="mt-4 text-base">
+                As the client's first site on Squarespace they were looking for a refresh and a new
+                look. We gave them a new look and a new website on the same platform.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

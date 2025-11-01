@@ -14,11 +14,11 @@ export default function Slider({ items, title, slidesToShow = 1, id }: SliderPro
   if (items.length === 0) return null
 
   return (
-    <section id={id} className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-12">
+    <section id={id} className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-20">
       {title && (
-        <h2 className="text-foreground mb-16 text-center text-7xl font-extrabold">{title}</h2>
+        <h2 className="text-foreground mb-16 mt-8 text-center text-7xl font-extrabold">{title}</h2>
       )}
-      <div className="slider-container relative w-full overflow-hidden">
+      <div className="slider-container relative w-full overflow-hidden pb-8">
         <Splide
           options={{
             type: 'loop',
@@ -45,11 +45,11 @@ export default function Slider({ items, title, slidesToShow = 1, id }: SliderPro
             breakpoints: {
               1024: {
                 perPage: Math.min(2, slidesToShow),
-                gap: '2rem',
+                gap: '4rem',
               },
               640: {
                 perPage: 1,
-                gap: '1.5rem',
+                gap: '3rem',
               },
             },
           }}
@@ -57,8 +57,8 @@ export default function Slider({ items, title, slidesToShow = 1, id }: SliderPro
         >
           {items.map((item, index) => (
             <SplideSlide key={index}>
-              <div className="flex items-center justify-center text-center">
-                <p className="text-foreground text-4xl font-bold uppercase tracking-tight md:text-5xl lg:text-6xl">
+              <div className="flex items-center justify-center px-4 text-center">
+                <p className="text-foreground whitespace-nowrap text-4xl font-bold uppercase tracking-tight md:text-5xl lg:text-6xl">
                   {item}
                 </p>
               </div>

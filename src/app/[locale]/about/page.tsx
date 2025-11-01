@@ -1,22 +1,33 @@
+'use client'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import Jeremy from '../../icons/Jeremy.jpeg'
-import Shannon from '../../icons/Shannon.jpeg'
+import { motion } from 'framer-motion'
+import Jeremy from '../../images/Jeremy.jpeg'
+import Shannon from '../../images/Shannon.jpeg'
 
 export default function About() {
   const t = useTranslations('')
   return (
-    <section className="mt-20">
+    <section id="about">
       <div className="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16 ">
-        <div className="mx-auto mb-8 max-w-screen-sm text-center lg:mb-16">
-          <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-            Meet the team
-          </h2>
-        </div>
+        <motion.h2
+          className="text-foreground mb-16 text-center text-7xl font-extrabold"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+        >
+          Meet the team
+        </motion.h2>
         <div className="mb-6 grid gap-8 md:grid-cols-2 lg:mb-16">
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.8, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
+          >
             <div className="inset-0 flex items-center justify-center">
-              <h2 className="text-3xl font-bold text-white">Jeremy Grice</h2>
+              <h3 className="text-3xl font-bold text-white">Jeremy Grice</h3>
             </div>
             <div className="group relative mx-auto mt-20 h-40 w-40 overflow-hidden rounded-full sm:h-48 sm:w-48 md:h-56 md:w-56">
               <Image
@@ -39,7 +50,7 @@ export default function About() {
                   href="https://www.linkedin.com/in/jeremylgrice/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-gray-900 underline hover:no-underline dark:text-white"
+                  className="inline-flex items-center gap-2 text-gray-900 hover:underline dark:text-white"
                 >
                   LinkedIn
                   <svg
@@ -63,7 +74,7 @@ export default function About() {
                   href="https://vetthatcodes.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-gray-900 underline hover:no-underline dark:text-white"
+                  className="inline-flex items-center gap-2 text-gray-900 hover:underline dark:text-white"
                 >
                   Personal Website
                   <svg
@@ -87,7 +98,7 @@ export default function About() {
                   href="https://github.com/jeremylgrice"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-gray-900 underline hover:no-underline dark:text-white"
+                  className="inline-flex items-center gap-2 text-gray-900 hover:underline dark:text-white"
                 >
                   GitHub
                   <svg
@@ -107,10 +118,15 @@ export default function About() {
                 </a>
               </div>
             </div>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+          >
             <div className="inset-0 flex items-center justify-center">
-              <h2 className="text-3xl font-bold text-white">Shannon Grice</h2>
+              <h3 className="text-3xl font-bold text-white">Shannon Grice</h3>
             </div>
             <div className="group relative mx-auto mt-20 h-40 w-40 overflow-hidden rounded-full sm:h-48 sm:w-48 md:h-56 md:w-56">
               <Image
@@ -134,7 +150,7 @@ export default function About() {
                   href="https://www.linkedin.com/in/shannonbgrice/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-gray-900 underline hover:no-underline dark:text-white"
+                  className="inline-flex items-center gap-2 text-gray-900 hover:underline dark:text-white"
                 >
                   LinkedIn
                   <svg
@@ -158,7 +174,7 @@ export default function About() {
                   href="https://www.shannongrice.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-gray-900 underline hover:no-underline dark:text-white"
+                  className="inline-flex items-center gap-2 text-gray-900 hover:underline dark:text-white"
                 >
                   Personal Website
                   <svg
@@ -182,7 +198,7 @@ export default function About() {
                   href="https://github.com/snowdoniadarkness"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-gray-900 underline hover:no-underline dark:text-white"
+                  className="inline-flex items-center gap-2 text-gray-900 hover:underline dark:text-white"
                 >
                   GitHub
                   <svg
@@ -202,7 +218,7 @@ export default function About() {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
