@@ -6,7 +6,7 @@ import hungryBuffalo from '../../icons/hungryBuffalo.jpg'
 export default function Work() {
   const t = useTranslations('')
   return (
-    <section className="mt-20">
+    <section className="mt-20" id="work">
       <div className="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16 ">
         <div className="mx-auto mb-8 max-w-screen-sm text-center lg:mb-16">
           <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">

@@ -21,11 +21,9 @@ export const Header: FC<Props> = ({ locale }) => {
       <div className="flex flex-row items-center gap-3">
         <nav className="inline-flex gap-8">
           <a href="#services">Services</a>
-          <Link href={'/work'}>Work</Link>
-          <Link lang={locale} href={`/about`}>
-            About
-          </Link>
-          <Link href={'/contact'} className="contact-link">
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#contact" className="contact-link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -40,7 +38,7 @@ export const Header: FC<Props> = ({ locale }) => {
                 d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
               />
             </svg>
-          </Link>
+          </a>
         </nav>
       </div>
     </div>
