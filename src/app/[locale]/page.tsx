@@ -132,7 +132,7 @@ export default function DashboardPage() {
             <div className="border-border rounded-lg border p-8 shadow-sm">
               <h3 className="text-foreground mb-2 text-4xl font-semibold">Ongoing Support</h3>
               <p className="text-base">
-                We don’t just hand off a site — we help it grow. Continuous updates, new features,
+                We don't just hand off a site — we help it grow. Continuous updates, new features,
                 and performance monitoring.
               </p>
               <p className="text-base">
