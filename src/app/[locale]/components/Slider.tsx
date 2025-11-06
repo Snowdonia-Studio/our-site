@@ -14,7 +14,10 @@ export default function Slider({ items, title, slidesToShow = 1, id }: SliderPro
   if (items.length === 0) return null
 
   return (
-    <section id={id} className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen py-20">
+    <section
+      id={id}
+      className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen md:py-20"
+    >
       {title && (
         <h2 className="text-foreground mb-16 mt-8 text-center text-7xl font-extrabold">{title}</h2>
       )}
@@ -49,7 +52,7 @@ export default function Slider({ items, title, slidesToShow = 1, id }: SliderPro
               },
               640: {
                 perPage: 1,
-                gap: '3rem',
+                gap: '2rem',
               },
             },
           }}
@@ -58,7 +61,7 @@ export default function Slider({ items, title, slidesToShow = 1, id }: SliderPro
           {items.map((item, index) => (
             <SplideSlide key={index}>
               <div className="flex items-center justify-center px-4 text-center">
-                <p className="text-foreground whitespace-nowrap text-4xl font-bold uppercase tracking-tight md:text-5xl lg:text-6xl">
+                <p className="text-foreground whitespace-nowrap text-4xl font-bold uppercase tracking-tight md:text-5xl">
                   {item}
                 </p>
               </div>

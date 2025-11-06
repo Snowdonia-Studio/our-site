@@ -12,7 +12,7 @@ export default function Work() {
     <section id="work">
       <div className="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16 ">
         <motion.h2
-          className="mb-16 text-center text-7xl font-extrabold"
+          className="text-foreground mb-8 text-center text-7xl font-extrabold md:mb-16"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}

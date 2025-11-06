@@ -1,11 +1,13 @@
 'use client'
 import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
+import { useParams } from 'next/navigation'
 import { getAllBlogPosts } from '@/src/data/blog-posts'
 
 export default function Blog() {
   const t = useTranslations('')
+  const params = useParams()
+  const locale = params.locale as string
   const posts = getAllBlogPosts()
 
   return (
@@ -29,7 +31,7 @@ export default function Blog() {
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.8, delay: index * 0.1, ease: [0.25, 0.1, 0.25, 1] }}
             >
-              <Link href={`/blog/${post.slug}`}>
+              <a href={`/${locale}/blog/${post.slug}`}>
                 <div className="border-border group h-full rounded-lg border p-8 shadow-sm transition-shadow hover:shadow-lg">
                   <time className="mb-2 text-sm text-gray-600 dark:text-gray-400">
                     {new Date(post.date).toLocaleDateString('en-US', {
@@ -52,7 +54,7 @@ export default function Blog() {
                     </div>
                   )}
                 </div>
-              </Link>
+              </a>
             </motion.div>
           ))}
         </div>

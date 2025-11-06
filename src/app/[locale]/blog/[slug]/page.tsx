@@ -1,6 +1,5 @@
 import { getBlogPost, getAllBlogPosts } from '@/src/data/blog-posts'
 import { notFound } from 'next/navigation'
-import Link from 'next/link'
 
 export async function generateStaticParams() {
   const posts = getAllBlogPosts()
@@ -25,8 +24,8 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <article className="mx-auto max-w-4xl px-6 py-20">
-      <Link
-        href="/blog"
+      <a
+        href={`/${params.locale}/blog`}
         className="mb-8 inline-flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
       >
         <svg
@@ -40,7 +39,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
         </svg>
         Back to Blog
-      </Link>
+      </a>
 
       <header className="mb-12 mt-8">
         <h1 className="text-foreground mb-4 text-5xl font-extrabold md:text-6xl">{post.title}</h1>

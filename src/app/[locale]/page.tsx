@@ -1,22 +1,18 @@
 import { useTranslations } from 'next-intl'
-import Image from 'next/image'
 import Slider from './components/Slider'
 import AnimatedSection from './components/AnimatedSection'
 import ContactUsPage from './contact/page'
 import WorkPage from './work/page'
 import AboutPage from './about/page'
 import BlogPage from './blog/page'
-import MountainBg from '../images/mountainBg.jpg'
 
 export default function DashboardPage() {
   const t = useTranslations('')
   return (
     <>
-      <section className="relative flex h-screen flex-col items-center justify-center py-20">
-        <Image src={MountainBg} alt="Mountain background" fill className="object-cover" priority />
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="relative z-10 mt-20 pt-20 pt-40">
-          <h1 className="text-center text-7xl font-extrabold leading-tight text-white">
+      <section className="relative flex flex-col items-center justify-center md:py-20">
+        <div className="relative z-10 pt-20 pt-40 md:mt-20">
+          <h1 className="text-center text-5xl font-extrabold leading-tight text-white md:text-7xl">
             <span className="bg-span-bg bg-clip-text text-transparent">
               Building Beautiful, Functional Websites That Drive Your Business Forward
             </span>
@@ -45,7 +41,7 @@ export default function DashboardPage() {
           'Squarespace',
         ]}
         title="Service Offerings"
-        slidesToShow={2}
+        slidesToShow={4}
         id="services"
       />
       <AnimatedSection className="mx-auto px-6 py-10">
