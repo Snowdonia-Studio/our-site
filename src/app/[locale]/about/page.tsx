@@ -41,7 +41,7 @@ export default function About() {
                 Jeremy is an eCommerce engineering leader with deep agency experience delivering
                 Shopify and Salesforce Commerce Cloud (SFCC) solutions. He partners closely with
                 clients from discovery through launch, leading cross-functional teams to ship
-                performant, scalable storefronts and measurable outcomes. Jeremy's focus spans
+                performant, scalable storefronts and measurable outcomes. Jeremy&apos;s focus spans
                 solution design, front-end engineering, and technical leadership across multi-brand
                 and enterprise builds.
               </p>

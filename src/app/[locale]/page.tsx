@@ -21,7 +21,7 @@ export default function DashboardPage() {
           </h1>
           <div className="my-16 px-20 text-center text-2xl text-white">
             Welcome to Snowdonia Studio, your partner in crafting seamless, user-friendly websites
-            that elevate your brand and maximize online success. Whether you're starting from
+            that elevate your brand and maximize online success. Whether you&apos;re starting from
             scratch or looking to refresh your online presence, we combine creativity with technical
             expertise to deliver digital experiences that make an impact.
           </div>
@@ -54,9 +54,9 @@ export default function DashboardPage() {
                     We build websites that work as hard as you do.
                   </h3>
                   <p className="text-base">
-                    Your website shouldn't just look good — it should perform. From sleek marketing
-                    sites to high-converting online stores, we combine design, development, and
-                    strategy to help your business grow online.
+                    Your website shouldn&apos;t just look good — it should perform. From sleek
+                    marketing sites to high-converting online stores, we combine design,
+                    development, and strategy to help your business grow online.
                   </p>
                 </div>
                 <div>
@@ -132,8 +132,8 @@ export default function DashboardPage() {
             <div className="border-border rounded-lg border p-8 shadow-sm">
               <h3 className="text-foreground mb-2 text-4xl font-semibold">Ongoing Support</h3>
               <p className="text-base">
-                We don't just hand off a site — we help it grow. Continuous updates, new features,
-                and performance monitoring.
+                We don&apos;t just hand off a site — we help it grow. Continuous updates, new
+                features, and performance monitoring.
               </p>
               <p className="text-base">
                 Focus: Maintenance plans, feature rollouts, content updates

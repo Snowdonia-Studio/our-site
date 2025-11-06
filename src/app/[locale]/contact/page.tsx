@@ -69,7 +69,7 @@ export default function ContactUsPage() {
               Thank you!
             </h3>
             <p className="mt-2 text-green-700 dark:text-green-300">
-              Your message has been sent. We'll get back to you shortly.
+              Your message has been sent. We&apos;ll get back to you shortly.
             </p>
           </div>
         ) : (
