@@ -11,7 +11,7 @@ export default function About() {
     <section id="about">
       <div className="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16 ">
         <motion.h2
-          className="text-foreground mb-16 text-center text-7xl font-extrabold"
+          className="text-foreground mb-8 text-center text-7xl font-extrabold md:mb-16"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
@@ -41,7 +41,7 @@ export default function About() {
                 Jeremy is an eCommerce engineering leader with deep agency experience delivering
                 Shopify and Salesforce Commerce Cloud (SFCC) solutions. He partners closely with
                 clients from discovery through launch, leading cross-functional teams to ship
-                performant, scalable storefronts and measurable outcomes. Jeremy’s focus spans
+                performant, scalable storefronts and measurable outcomes. Jeremy&apos;s focus spans
                 solution design, front-end engineering, and technical leadership across multi-brand
                 and enterprise builds.
               </p>

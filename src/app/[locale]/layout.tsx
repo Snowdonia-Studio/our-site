@@ -57,7 +57,7 @@ export default function RootLayout({
             <CustomCursor />
             <Header locale={locale} />
             <main className="mx-auto max-w-screen-2xl">{children}</main>
-            <Footer />
+            <Footer locale={locale} />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

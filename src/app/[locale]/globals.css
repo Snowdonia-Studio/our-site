@@ -245,4 +245,22 @@
     background-color: var(--background-secondary);
     color: var(--text-secondary);
   }
+
+  .link-underline {
+    position: relative;
+    display: inline-block;
+  }
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.3s ease-out;
+  }
+  .link-underline:hover::after {
+    width: 100%;
+  }
 }

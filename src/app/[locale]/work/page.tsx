@@ -12,7 +12,7 @@ export default function Work() {
     <section id="work">
       <div className="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16 ">
         <motion.h2
-          className="mb-16 text-center text-7xl font-extrabold"
+          className="text-foreground mb-8 text-center text-7xl font-extrabold md:mb-16"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
@@ -46,7 +46,8 @@ export default function Work() {
               </div>
               <p className="mt-4 text-base">
                 As a recently aquired brand, we were tasked with creating a modern, responsive
-                website that would reflect the brand's heritage and appeal to a modern audience.
+                website that would reflect the brand&apos;s heritage and appeal to a modern
+                audience.
               </p>
             </div>
           </motion.div>
@@ -102,8 +103,8 @@ export default function Work() {
                 </ul>
               </div>
               <p className="mt-4 text-base">
-                As the client's first site on Squarespace they were looking for a refresh and a new
-                look. We gave them a new look and a new website on the same platform.
+                As the client&apos;s first site on Squarespace they were looking for a refresh and a
+                new look. We gave them a new look and a new website on the same platform.
               </p>
             </div>
           </motion.div>
