@@ -12,10 +12,10 @@ export default function DashboardPage() {
   const t = useTranslations('')
   return (
     <>
-      <section className="relative flex h-screen flex-col items-center justify-center py-20">
+      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] flex h-screen w-screen flex-col items-center justify-center py-20">
         <Image src={MountainBg} alt="Mountain background" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-black/60"></div>
-        <div className="relative z-10 mt-20 pt-20 pt-40">
+        <div className="relative z-10 mx-auto mt-20 max-w-screen-2xl px-6 pt-20 pt-40">
           <h1 className="text-center text-7xl font-extrabold leading-tight text-white">
             <span className="bg-span-bg bg-clip-text text-transparent">
               Building Beautiful, Functional Websites That Drive Your Business Forward

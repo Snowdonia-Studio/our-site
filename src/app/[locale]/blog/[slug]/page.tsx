@@ -1,12 +1,22 @@
 import { getBlogPost, getAllBlogPosts } from '@/src/data/blog-posts'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import { locales } from '@/src/i18n'
 
 export async function generateStaticParams() {
   const posts = getAllBlogPosts()
-  return posts.map((post) => ({
-    slug: post.slug,
-  }))
+  const params = []
+  
+  for (const locale of locales) {
+    for (const post of posts) {
+      params.push({
+        locale,
+        slug: post.slug,
+      })
+    }
+  }
+  
+  return params
 }
 
 interface BlogPostPageProps {
@@ -26,7 +36,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <article className="mx-auto max-w-4xl px-6 py-20">
       <Link
-        href="/blog"
+        href={`/${params.locale}/blog`}
         className="mb-8 inline-flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
       >
         <svg
