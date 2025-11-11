@@ -2,6 +2,7 @@ import { getBlogPost, getAllBlogPosts } from '@/src/data/blog-posts'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { locales } from '@/src/i18n'
+import { unstable_setRequestLocale } from 'next-intl/server'
 
 export async function generateStaticParams() {
   const posts = getAllBlogPosts()
@@ -27,6 +28,7 @@ interface BlogPostPageProps {
 }
 
 export default function BlogPostPage({ params }: BlogPostPageProps) {
+  unstable_setRequestLocale(params.locale)
   const post = getBlogPost(params.slug)
 
   if (!post) {
